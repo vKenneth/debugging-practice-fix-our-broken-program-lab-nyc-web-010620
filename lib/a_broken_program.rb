@@ -21,3 +21,12 @@ puts "Finally, barewords, or variables, that are set equal to things."
 puts "Anything that isn't one of those will cause an error."
 
 see
+
+describe 'A broke program' do
+  it 'raises an error when loaded' do
+    expect{
+      load 'lib/a_broken_program.rb'
+    }.to raise_error
+  end
+  
+end
